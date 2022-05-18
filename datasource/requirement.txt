@@ -1,0 +1,5 @@
+Faker
+PyMySQL
+pysqler
+boto3
+kafka-python
