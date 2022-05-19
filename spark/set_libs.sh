@@ -1,0 +1,2 @@
+wget http://maven.aliyun.com/nexus/content/groups/public/org/apache/hudi/hudi-spark3.1.2-bundle_2.12/0.10.1/hudi-spark3.1.2-bundle_2.12-0.10.1.jar .
+wget http://maven.aliyun.com/nexus/content/groups/public/org/apache/spark/spark-avro_2.12/3.1.2/spark-avro_2.12-3.1.2.jar .

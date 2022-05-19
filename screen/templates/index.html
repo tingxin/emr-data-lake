@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <title> dashboard </title>
+</head>
+
+<body>
+    <h1> 美观漂亮的数据大屏 </h1>
+
+    <body>
+        当前实时销售金额
+        <h2>
+            <div id="log"></div>
+        </h2>
+
+        <script src="http://172.31.43.238:5030/js"></script>
+        <script type="text/javascript" charset="utf-8">
+            var socket = io();
+            socket.on('connect', function () {
+                socket.emit('my event', { data: 'I\'m connected!' });
+            });
+            socket.on('push', function (msg, cb) {
+                document.getElementById("log").innerHTML = `${msg.data.amount}$`;
+            });
+        </script>
+    </body>
+
+</html>
