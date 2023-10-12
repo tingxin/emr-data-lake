@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS `order` (
+CREATE TABLE IF NOT EXISTS `order_event` (
     order_id INT AUTO_INCREMENT NOT NULL,
     goods_id INT NOT NULL,
     user_mail varchar(20) NOT NULL,

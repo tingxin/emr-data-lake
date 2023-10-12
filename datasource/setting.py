@@ -1,7 +1,7 @@
 # mysql
-HOST = 'demo.c6lwjjfhbm6a.rds.cn-northwest-1.amazonaws.com.cn'
+HOST = 'database-1.cqshokmqgqfv.ap-northeast-1.rds.amazonaws.com'
 PORT = 3306
-USER = 'admin'
+USER = 'demo'
 PWD = 'Demo1234'
-DB = 'demo'
-Focus_TB = 'order'
+DB = 'business'
+Focus_TB = 'order_event'

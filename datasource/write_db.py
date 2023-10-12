@@ -6,8 +6,7 @@ import setting
 from mysql import get_conn
 from mock import gen, DataType
 
-focus_database = 'demo'
-conn = get_conn(focus_database)
+conn = get_conn(setting.DB)
 
 order_schema = {
     "user_mail": (DataType.Enum, ('barry.xu@163.com', 'dandan@qq.com', 'pony@qq.com', 'focus@qq.com')),
@@ -20,12 +19,12 @@ order_schema = {
 }
 
 creator = gen(columns=order_schema,
-              interval_min=1000, interval_max=5000)
+              interval_min=100, interval_max=5000)
 
 for item in creator:
     print(item)
     try:
-        command = Insert("`{0}`".format("order"))
+        command = Insert("`{0}`".format(setting.Focus_TB))
         for key in item:
             command.put(key, item[key])
 
